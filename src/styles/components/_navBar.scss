@@ -1,0 +1,440 @@
+@use '../utils/forwards.scss' as *;
+
+/*---- MOBILE: ----*/
+@media (max-width: 768px) {
+  .navbar-header {
+    backdrop-filter: none;
+    background-color: $bg-menu-desktop;
+    color: $font-color-grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    filter: none;
+    font-family: 'Inter';
+    font-size: $fz-xl;
+    line-height: 1.3em;
+    height: 100px;
+    padding: 0px 25px;
+    pointer-events: auto;
+    // position: fixed;
+    // box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    top: 0;
+    user-select: auto;
+    width: 100%;
+    z-index: 11;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    -webkit-font-smoothing: antialiased;
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $font-color-white;
+      counter-reset: item 0;
+      font-family: 'Courier';
+      position: relative;
+      width: 100%;
+      z-index: 12;
+      -webkit-box-align: center;
+      -webkit-box-pack: justify;
+      .navbar-brand {
+        a {
+          .icon {
+            path {
+              &:hover {
+                fill: $on-hover-color;
+              }
+            }
+          }
+        }
+      }
+      .navbar-categories {
+        color: $font-color-white;
+        font-family: 'Courier';
+        font-size: $fz-xl;
+        line-height: 1.3;
+        pointer-events: auto;
+        user-select: auto;
+        -webkit-font-smoothing: antialiased;
+        .categories-mobile {
+          display: flex;
+          .hamburger {
+            align-self: center;
+            position: relative;
+            margin-right: -15px;
+            right: 0;
+            z-index: 1;
+            padding: 15px;
+            cursor: pointer;
+            .hamburger-react {
+              appearance: auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              z-index: 10;
+            }
+            .navbar-links {
+              background-color: $bg-main-light; 
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: $font-color-white;
+              width: min(75vw, 400px);
+              height: 100vh;
+              padding: 50px 10px;
+              position: fixed;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              font-family: 'Courier';
+              font-size: $fz-xl;
+              line-height: 1.3em;
+              box-shadow:  $shadow -10px 0px 30px -15px;
+              animation: slideIn .3s ease;
+              z-index: 9;
+              visibility: visible;
+              -webkit-box-align: center;
+              -webkit-box-pack: center;
+              @keyframes slideIn {
+                0%{
+                  transform: translateX(100%);
+                }
+                100%{
+                  transform: translateX(0);
+                }
+              }
+              nav {
+                ol {
+                  width: 100%;
+                  box-sizing: border-box;
+                  list-style-type: none;
+                  color: $font-color-white;
+                  text-align: center;
+                  li {
+                    cursor: pointer;
+                    counter-increment: item 1;
+                    font-size: $fz-lg;
+                    line-height: 1.3;
+                    margin: 0 auto 20px;
+                    position: relative;
+                    &::before{
+                      box-sizing: border-box;
+                      color: $font-color;
+                      font-size: $fz-sm; 
+                      margin-bottom: 5px;
+                      display: block;
+                      content: '0' counter(item,decimal) '.';
+                    }
+                    a {
+                      width: 100%;
+                      display: inline-block;
+                      color: $font-color-white;
+                      text-decoration: none;
+                      text-decoration-skip-ink: auto;
+                      font-size: $fz-lg;
+                      position: relative;
+                      padding: 3px 20px 20px;
+                    }
+                    
+                  }
+                }
+                .resume-container {
+                  margin: 10% auto 0px;
+                  .cv-btn {
+                    width: max-content;
+                    background-color: $bg-tab-transparent;
+                    display: block;
+                    font-size: $fz-sm;
+                    font-family: 'Courier';
+                    line-height: 1;
+                    padding: 18px 50px;
+                    position: relative;
+                    border: 1px solid $font-color;
+                    border-radius: 4px;
+                    color: $font-color;
+                    text-align: center;
+                    text-decoration: none;
+                    text-decoration-skip-ink: auto;
+                    cursor: pointer;
+                    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+                    &:active {
+                    background-color: $on-hover-color;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .categories-desktop {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/*---- TABLET: ----*/
+@media (min-width: 769px) and (max-width: 1080px) {
+  .navbar-header {
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background-color: $bg-menu-desktop;
+    color: $font-color-grey;
+    display: flex;
+    filter: none;
+    font-family: 'Inter';
+    font-size: $fz-xl;
+    height: 100px;
+    justify-content: space-between;
+    line-height: 1.3;
+    padding: 0 40px;
+    pointer-events: auto;
+    // position: fixed;
+    top: 0;
+    user-select: auto;
+    width: 100%;
+    z-index: 11;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    -webkit-font-smoothing: antialiased;
+    .navbar-container {
+      align-items: center;
+      counter-reset: item 0;
+      color: $font-color-white;
+      display: flex;
+      font-family: 'Courier';
+      font-size: $fz-xl;
+      justify-content: space-between;
+      pointer-events: auto;
+      position: relative;
+      width: 100%;
+      z-index: 12;
+      -webkit-box-align: center;
+      -webkit-box-pack: justify;
+      .navbar-brand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+        a {
+          color: $font-color;
+          height: 42px;
+          position: relative;
+          text-decoration: none;
+          text-decoration-skip-ink: auto;
+          width: 42px;
+          .icon {
+            vertical-align: middle;
+            max-width: 100%;
+          }
+        }
+      }
+      .navbar-categories {
+        display: flex;
+        align-items: center;
+        -webkit-box-align: center;
+        .categories-desktop {
+          display: flex;
+          .navbar-links {
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            ol {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              list-style-type: none;
+              -webkit-box-align: center;
+              -webkit-box-pack: justify;
+              li {
+                counter-increment: item 1;
+                font-size: 13px;
+                margin: 0px 5px;
+                position: relative;
+                text-align: left;
+                transition-delay: 0s;
+                a{ 
+                  color: $font-color-white;
+                  display: inline-block;
+                  padding: 10px;
+                  position: relative;
+                  text-decoration: none;
+                  text-decoration-skip-ink: auto;
+                  &::before {
+                    box-sizing: border-box;
+                    content: '0' counter(item) '.';
+                    color: $font-color;
+                    font-size: $fz-xs;
+                    margin-right: 5px;
+                    text-align: right;
+                  }
+                }
+              }
+            }
+            .resume-container {
+              transition-delay: 0.4s;
+              a {
+                background-color: $bg-tab-transparent;
+                border: 1px solid $font-color;
+                border-radius: 4px;
+                color: $font-color;
+                display: inline-block;
+                font-size: 13px;
+                line-height: 1;
+                margin-left: 15px;
+                padding: 0.75rem 1rem;
+                position: relative;
+                text-decoration: none;
+                text-decoration-skip-ink: auto;
+                transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+                &:active {
+                background-color: $on-hover-color;
+                }
+              }
+            }
+          }
+        }
+        .categories-mobile {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/*---- DESKTOP: ----*/
+@media (min-width: 1081px) {
+  .navbar-header {
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background-color: $bg-menu-desktop;
+    color: $font-color-grey;
+    filter: none;
+    font-family: 'Inter';
+    font-size: $fz-xl;
+    height: 100px;
+    justify-content: space-between;
+    line-height: 1.3;
+    pointer-events: auto;
+    padding: 0 50px;
+    position: fixed;
+    top: 0;
+    user-select: auto;
+    width: 100%;
+    z-index: 11;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    -webkit-font-smoothing: antialiased;
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $font-color-white;
+      counter-reset: item 0;
+      font-family: 'Courier';
+      font-size: $fz-xl;
+      position: relative;
+      width: 100%;
+      z-index: 12;
+      -webkit-box-align: center;
+      -webkit-box-pack: justify;
+      .navbar-brand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+        a {
+          display: block;
+          color: $font-color;
+          height: 42px;
+          position: relative;
+          text-decoration: none;
+          text-decoration-skip-ink: auto;
+          width: 42px;
+          .icon {
+            user-select: none;
+            fill: none;
+            max-width: 100%;
+            vertical-align: middle;
+            path:first-child {
+              &:hover {
+                fill: $on-hover-color;
+              }
+            }
+          }
+        }
+      }
+      .navbar-categories {
+        display: flex;
+        align-items: center;
+        -webkit-box-align: center;
+        .categories-desktop {
+          .navbar-links {
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            ol {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              list-style-type: none;
+              font-size: $fz-xl;
+              -webkit-box-align: center;
+              -webkit-box-pack: justify;
+              li {
+                counter-increment: item 1;
+                font-size: 13px;
+                position: relative;
+                transition-delay: 0s;
+                a {
+                  color: $font-color-white;
+                  display: inline-block;
+                  padding: 10px;
+                  position: relative;
+                  text-decoration: none;
+                  text-decoration-skip-ink: auto;
+                  &::before {
+                    box-sizing: border-box;
+                    color: $font-color;
+                    content: '0' counter(item) '.';
+                    font-size: $fz-xs;
+                    margin-right: 5px;
+                    text-align: right;
+                  }
+                }
+              }
+            }
+            .resume-container {
+              font-size: $fz-xl;
+              transition-delay: 0.4s;
+              a {
+                background-color: $bg-tab-transparent;
+                color: $font-color;
+                display: inline-block;
+                font-size: 13px;
+                margin-left: 15px;
+                padding: 0.75rem 1rem;
+                position: relative;
+                text-decoration: none;
+                text-decoration-skip-ink: auto;
+                border: 1px solid $font-color;
+                border-radius: 4px;
+                transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+                &:hover {
+                background-color: $on-hover-color;
+                }
+              }
+            }
+          }
+        }
+        .categories-mobile {
+          display: none;
+        }
+      }
+    }
+  }
+}

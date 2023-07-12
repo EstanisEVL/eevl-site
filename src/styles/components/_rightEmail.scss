@@ -1,0 +1,51 @@
+@use '../utils/forwards.scss' as *;
+
+.right-email-container {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .right-email-container {
+    display: block;
+    bottom: 0;
+    color: $font-color-grey-light;
+    font-family: 'Inter';
+    font-size: $fz-xl;
+    left: auto;
+    line-height: 1.3;
+    position: fixed;
+    right: 40px;
+    width: 40px;
+    z-index: 10;
+    -webkit-font-smoothing: antialiased;
+    .right-email {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      -webkit-box-align: center;
+      a {
+        color: $font-color-grey-light;
+        display: block;
+        font-family: 'Courier';
+        font-size: $fz-xs;
+        letter-spacing: 0.1em;
+        line-height: 18px;
+        margin: 20px auto;
+        padding: 10px;
+        position: relative;
+        text-decoration: none;
+        text-decoration-skip-ink: auto;
+        writing-mode: vertical-rl;
+      }
+      &::after {
+        background-color: $font-color-grey-light;
+        box-sizing: border-box;
+        content: '';
+        display: block;
+        height: 90px;
+        width: 1px;
+      }
+    }
+  }
+}

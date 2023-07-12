@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import MobileMenuContext from "./utils/context/MobileMenuContext";
+import { BrowserRouter as Router } from "react-router-dom";
+import Main from "./components/presentation/main/Main";
+import NavBar from "./components/presentation/navbar/NavBar";
+import "./styles/main.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MobileMenuContext>
+      <div className="App">
+        <Router>
+          <NavBar />
+          <Main />
+        </Router>
+      </div>
+    </MobileMenuContext>
   );
 }
 
