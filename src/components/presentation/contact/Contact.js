@@ -12,6 +12,7 @@ import {
 const Contact = ({ title, section }) => {
   const { isIntersecting, fromRef } = useObserver({ treshold: 1 });
   const [t, i18n] = useTranslation("global");
+
   return (
     <StyledContactBackgroundContainer>
       <StyledContactSection id="contact" ref={fromRef}>

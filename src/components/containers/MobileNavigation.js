@@ -10,7 +10,7 @@ import { useTheme } from "styled-components";
 
 const MobileNavigation = ({language}) => {
   const context = useContext(Contexts.MobileMenuContext);
-  const { toggle, setToggle, display } = context;
+  const { toggle, setToggle } = context;
   const theme = useTheme();
 
   return (
@@ -22,7 +22,7 @@ const MobileNavigation = ({language}) => {
           color={theme.icon}
           label="Show menu"
         />
-        {display && <NavLinksMobile language={language} />}
+        {toggle && <NavLinksMobile language={language} />}
       </StyledMobileHamburguer>
     </StyledMobileNavigation>
   );

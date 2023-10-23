@@ -1,34 +1,27 @@
-import { useEffect, useState } from 'react';
-import Contexts from './Contexts';
+import { useState } from "react";
+import Contexts from "./Contexts";
 
 const MobileMenuContext = ({ children }) => {
-  const [ toggle, setToggle ] = useState(false);
-  const [ display, setDisplay ] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
-  const toggleBlur = () => {
-    const blur = document.getElementById('main');
-    blur.classList.toggle('blur');
-  }
+  const mainClass = toggle ? "blur" : "";
 
-  useEffect(() => {
-    setDisplay(toggle);
-    toggleBlur();
-  }, [toggle])
-  
   const closeMenu = () => {
     setToggle(false);
   };
 
-  return(
-    <Contexts.MobileMenuContext.Provider value={{
-      toggle,
-      setToggle,
-      display,
-      closeMenu,
-    }}>
-      { children }
+  return (
+    <Contexts.MobileMenuContext.Provider
+      value={{
+        toggle,
+        setToggle,
+        closeMenu,
+        mainClass,
+      }}
+    >
+      {children}
     </Contexts.MobileMenuContext.Provider>
   );
-}
+};
 
 export default MobileMenuContext;

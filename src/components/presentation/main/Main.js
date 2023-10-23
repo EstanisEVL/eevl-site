@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import About from "../about/About";
 import Contact from "../contact/Contact";
 import Footer from "../footer/Footer";
@@ -5,16 +6,19 @@ import Hero from "../hero/Hero";
 import LeftSocials from "../contact/LeftSocials";
 import Projects from "../experience/Projects";
 import RightEmail from "../contact/RightEmail";
+import Contexts from "../../../context/Contexts";
 
 import useWindowSize from "../../../hooks/useWindowSize";
 import { useTranslation } from "react-i18next";
 
 const Main = () => {
+  const context = useContext(Contexts.MobileMenuContext);
+  const { mainClass } = context;
   const size = useWindowSize();
   const [t, i18n] = useTranslation("global");
 
   return (
-    <main id="main">
+    <main className={mainClass}>
       <Hero />
       {size.width >= 769 && <LeftSocials />}
       {size.width >= 769 && <RightEmail />}
