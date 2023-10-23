@@ -12,7 +12,7 @@ import {
 import { useEffect, useState } from "react";
 import { StyledP } from "../../../GlobalStyle";
 
-const Projects = ({ title, section, language }) => {
+const Projects = ({ title, section, language, linkColor }) => {
   const { isIntersecting, fromRef } = useObserver({ treshold: 1 });
   const [projects, setProjects] = useState([]);
 
@@ -44,7 +44,7 @@ const Projects = ({ title, section, language }) => {
           projects?.map((project) => {
             return (
               <StyledProjectsListItem key={project.id}>
-                <ProjectGridComponent project={project} language={language} />
+                <ProjectGridComponent project={project} language={language} linkColor={linkColor} />
                 <ProjectImgComponent project={project} />
               </StyledProjectsListItem>
             );

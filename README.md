@@ -6,7 +6,7 @@ This is my portfolio site where you will find a collection of all my latest proj
 
 ## Index
 
-1. [About the site](#about).
+1. [About the site](#about-the-site).
 2. [Featured projects](#featured-projects).
 3. [Techs and skills](#techs-and-skills).
 4. [Contact info](#contact-info).

@@ -9,7 +9,7 @@ import {
   StyledProjectsLinks,
 } from "./ProjectsStyles";
 
-const ProjectGridComponent = ({ project, language }) => {
+const ProjectGridComponent = ({ project, language, linkColor }) => {
   const { isIntersecting, fromRef } = useObserver({ treshold: 1 });
   return (
     <StyledProjectsGrid ref={fromRef}>
@@ -42,7 +42,9 @@ const ProjectGridComponent = ({ project, language }) => {
         </StyledProjectDescription>
 
         <StyledProjectsLinks className={isIntersecting ? "" : "hidden scroll-in"}
-          delay={"4s"}>
+          delay={"4s"}
+          linkColor={linkColor}
+          >
           <a
             href={project.repo}
             aria-label="GitHub Link"

@@ -67,7 +67,7 @@ export const StyledProjectsGrid = styled.div`
 `;
 
 export const StyledProjectOverline = styled.p.withConfig({
-  shouldForwardProp: (prop) => prop !== "delay"
+  shouldForwardProp: (prop) => prop !== "delay",
 })`
   @media (min-width: 769px) {
     font-size: 13px;
@@ -78,11 +78,11 @@ export const StyledProjectOverline = styled.p.withConfig({
   font-size: 1.083333rem;
   margin-block-end: 0.769234em;
   margin-block-start: 0.769234em;
-  transition: opacity ${props => props.delay} ease-in, transform .5s ease-in;
+  transition: opacity ${(props) => props.delay} ease-in, transform 0.5s ease-in;
 `;
 
 export const StyledProjectTitle = styled.h3.withConfig({
-  shouldForwardProp: (prop) => prop !== "delay"
+  shouldForwardProp: (prop) => prop !== "delay",
 })`
   @media (min-width: 769px) {
     font-size: clamp(24px, 5vw, 28px);
@@ -92,7 +92,7 @@ export const StyledProjectTitle = styled.h3.withConfig({
   font-weight: 600;
   line-height: 1.1;
   margin-block-end: 0.4166667em;
-  transition: opacity ${props => props.delay} ease-in, transform .5s ease-in;
+  transition: opacity ${(props) => props.delay} ease-in, transform 0.5s ease-in;
 `;
 
 export const StyledProjectAnchor = styled.a`
@@ -122,7 +122,7 @@ export const StyledProjectAnchor = styled.a`
 `;
 
 export const StyledProjectDescription = styled.div.withConfig({
-  shouldForwardProp: (prop) => prop !== "delay"
+  shouldForwardProp: (prop) => prop !== "delay",
 })`
   @media (min-width: 769px) {
     background-color: ${(props) => props.theme.bgSecondary};
@@ -139,7 +139,7 @@ export const StyledProjectDescription = styled.div.withConfig({
   position: relative;
   user-select: none;
   z-index: 2;
-  transition: opacity ${props => props.delay} ease-in, transform .5s ease-in;
+  transition: opacity ${(props) => props.delay} ease-in, transform 0.5s ease-in;
   p {
     font-family: "Calibre";
     font-size: 18px;
@@ -204,7 +204,7 @@ export const StyledProjectTechList = styled.ul`
 `;
 
 export const StyledProjectsLinks = styled.div.withConfig({
-  shouldForwardProp: (prop) => prop !== "delay"
+  shouldForwardProp: (prop) => prop !== "delay" && prop !== "linkColor",
 })`
   @media (min-width: 769px) {
     justify-content: flex-end;
@@ -231,10 +231,10 @@ export const StyledProjectsLinks = styled.div.withConfig({
   position: relative;
   -webkit-box-align: center;
   -webkit-box-pack: start;
-  transition: opacity ${props => props.delay} ease-in, transform .5s ease-in;
+  transition: opacity ${(props) => props.delay} ease-in, transform 0.5s ease-in;
   a {
     color: ${(props) =>
-      props.theme.filter === false ? props.theme.bg : props.theme.icon};
+      props.theme.filter === false ? props.linkColor : props.theme.icon};
     display: flex;
     justify-content: center;
     padding: 0.833333rem;

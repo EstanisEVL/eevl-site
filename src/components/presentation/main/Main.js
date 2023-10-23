@@ -26,6 +26,7 @@ const Main = () => {
           title={t("projects.header")}
           section={"section 2"}
           language={i18n.language}
+          linkColor={size.width >= 769 ? "#030C2E" : "#F2F3F8"}
         />
       </div>
       <div id="3">
