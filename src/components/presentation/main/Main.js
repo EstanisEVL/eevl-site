@@ -1,53 +1,37 @@
-import React from "react";
-import useWindowSize from "../../../utils/hooks/useWindowSize";
-import AboutSection from "../about/AboutSection";
+import About from "../about/About";
 import Contact from "../contact/Contact";
 import Footer from "../footer/Footer";
-import FooterTablet from "../footer/FooterTablet";
-import HeroSection from "../hero/HeroSection";
+import Hero from "../hero/Hero";
 import LeftSocials from "../contact/LeftSocials";
-import OtherProjects from "../experience/OtherProjects";
 import Projects from "../experience/Projects";
 import RightEmail from "../contact/RightEmail";
-// import Jobs from "../jobs/Jobs";
 
-// ADAPTAR COMPONENTES A LAZY LOADING
+import useWindowSize from "../../../hooks/useWindowSize";
+import { useTranslation } from "react-i18next";
 
 const Main = () => {
   const size = useWindowSize();
+  const [t, i18n] = useTranslation("global");
 
   return (
     <main id="main">
-      {size.width < 769 && (
-        <>
-          <HeroSection />
-          <AboutSection />
-          <Projects />
-          <OtherProjects />
-          <Contact />
-          {/* <Jobs /> */}
-          <Footer />
-        </>
-      )}
-      {size.width >= 769 && (
-        <>
-          <LeftSocials />
-          <RightEmail />
-          <HeroSection />
-          <AboutSection />
-          <Projects />
-          <OtherProjects />
-          <Contact />
-          {/* <Jobs /> */}
-          <FooterTablet />
-        </>
-      )}
-      {/* {
-        size.width >= 1080 &&
-        <>
-        
-        </>
-      } */}
+      <Hero />
+      {size.width >= 769 && <LeftSocials />}
+      {size.width >= 769 && <RightEmail />}
+      <div id="1">
+        <About title={t("about.header")} section={"section 1"} />
+      </div>
+      <div id="2">
+        <Projects
+          title={t("projects.header")}
+          section={"section 2"}
+          language={i18n.language}
+        />
+      </div>
+      <div id="3">
+        <Contact title={t("contact.header")} section={"section 3"} />
+      </div>
+      <Footer language={i18n.language} />
     </main>
   );
 };

@@ -1,29 +1,47 @@
 import { useContext } from "react";
-import Contexts from "../../../utils/context/Contexts";
+import Contexts from "../../../context/Contexts";
 import CvButton from "../buttons/CvButton";
-import { HashLink as Link } from "react-router-hash-link";
 import { NavLinksList } from "../../utils/NavLinksList";
+import {
+  StyledMobileMenu,
+  StyledMobileNav,
+  StyledMobileOl,
+  StyledMobileLi,
+  StyledMobileLink,
+} from "./NavBarStyles";
 
-const NavLinksMobile = () => {
+const NavLinksMobile = ({ language }) => {
   const context = useContext(Contexts.MobileMenuContext);
   const { closeMenu } = context;
 
   return (
     <>
-      <aside className="navbar-links" id="navlinks">
-        <nav>
-          <ol>
-            {NavLinksList.map((link) => {
-              return <li key={link.id}>
-                <Link to={link.to} smooth onClick={closeMenu}>
-                  {link.title}
-                </Link>
-              </li>;
-            })}
-          </ol>
-          <CvButton />
-        </nav>
-      </aside>
+      <StyledMobileMenu id="navlinks">
+        <StyledMobileNav>
+          <StyledMobileOl>
+            {language === "en"
+              ? NavLinksList.map((link) => {
+                  return (
+                    <StyledMobileLi key={link.id}>
+                      <StyledMobileLink to={link.to} smooth onClick={closeMenu}>
+                        {link.title}
+                      </StyledMobileLink>
+                    </StyledMobileLi>
+                  );
+                })
+              : NavLinksList.map((link) => {
+                  return (
+                    <StyledMobileLi key={link.id}>
+                      <StyledMobileLink to={link.to} smooth onClick={closeMenu}>
+                        {link.titleEs}
+                      </StyledMobileLink>
+                    </StyledMobileLi>
+                  );
+                })}
+          </StyledMobileOl>
+          <CvButton text={language === "en" ? "Resume" : "Ver CV"} language={language}/>
+        </StyledMobileNav>
+      </StyledMobileMenu>
     </>
   );
 };

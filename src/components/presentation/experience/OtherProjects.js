@@ -1,20 +1,40 @@
+import useObserver from "../../../hooks/useObserver";
 import { OtherProjectsList } from "../../utils/OtherProjectsList";
+import { StyledButton } from "../buttons/ButtonStyles";
+import {
+  StyledOtherProjectsSection,
+  StyledOtherProjectsH2,
+  StyledArchiveLink,
+  StyledOtherProjectsGrid,
+} from "./OtherProjectsStyles";
 
-const OtherProjects = () => {
+const OtherProjects = ({ title, language }) => {
+  const { isIntersecting, fromRef } = useObserver({ treshold: 1 });
   return (
-    <section className="other-projects-section">
-      <h2>Other Noteworthy Projects</h2>
-      <a className="archive-link" href="/archive">
-        view the archive
-      </a>
-      <ul className="other-projects-grid">
+    <StyledOtherProjectsSection ref={fromRef}>
+      <StyledOtherProjectsH2
+        className={isIntersecting ? "" : "hidden"}
+        delay={"2s"}
+      >
+        {title}
+      </StyledOtherProjectsH2>
+
+      <StyledArchiveLink
+        href="/archive"
+        className={isIntersecting ? "" : "hidden scroll-in"}
+        delay={"3s"}
+      >
+        {language === "en" ? "view the archive" : "ver archivo"}
+      </StyledArchiveLink>
+
+      <StyledOtherProjectsGrid className={isIntersecting ? "" : "hidden scroll-in"} delay={"3s"}>
         {OtherProjectsList.map((project) => {
           return (
-            <li key={project.id} className="other-projects-list-item">
-              <div className="other-projects-inner">
+            <li className="styled-link" key={project.id}>
+              <div>
                 <header>
-                  <div className="other-project-top">
-                    <div className="folder">
+                  <div>
+                    <div>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         role="img"
@@ -24,14 +44,14 @@ const OtherProjects = () => {
                         strokeWidth="1"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="feather feather-folder"
                       >
                         <title>Folder</title>
                         <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
                       </svg>
                     </div>
-                    <div className="project-links">
-                      <a className="external-link" href={project.href}>
+
+                    <div>
+                      <a href={project.href}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           role="img"
@@ -41,7 +61,6 @@ const OtherProjects = () => {
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          className="feather feather-external-link"
                         >
                           <title>External Link</title>
                           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -51,28 +70,32 @@ const OtherProjects = () => {
                       </a>
                     </div>
                   </div>
-                  <h3 className="project-title">
-                    <a href={project.href}>{project.title}</a>
+
+                  <h3>
+                    <a href={project.href}>{language === "en" ? project.title : project.titleEs}</a>
                   </h3>
-                  <div className="project-description">
-                    <p>{project.description}</p>
+
+                  <div>
+                    <p>{language === "en" ? project.description : project.descriptionEs}</p>
                   </div>
                 </header>
-                <footer>
-                  <ul className="project-tech-list">
+
+                <div>
+                  <ul>
                     {project.techs.map((tech) => {
                       return <li key={tech.id}>{tech.title}</li>;
                     })}
                   </ul>
-                </footer>
+                </div>
               </div>
             </li>
           );
         })}
-      </ul>
-      {/* AGREGAR FUNCIONALIDAD AL BOTÓN Y MOVER A COMPONENTES/BOTONES */}
-      <button className="show-more-btn">Show More</button>
-    </section>
+      </StyledOtherProjectsGrid>
+
+      {/* AGREGAR FUNCIONALIDAD AL BOTÓN O REEMPLAZAR POR INFINITE SCROLLING */}
+      <StyledButton padding={"20px 28px"} className={isIntersecting ? "" : "hidden scroll-in"}>{language === "en" ? "Show More" : "Ver más"}</StyledButton>
+    </StyledOtherProjectsSection>
   );
 };
 

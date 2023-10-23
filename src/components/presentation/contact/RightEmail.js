@@ -1,10 +1,21 @@
+import { useEffect, useState } from "react";
+import { StyledRightEmail } from "./ContactStyles";
+
 const RightEmail = () => {
-  return(
-    <div className='right-email-container'>
-      <div className='right-email'>
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(()=> {
+      setIsVisible(true);
+    }, 3000)
+  }, []);
+
+  return (
+    <StyledRightEmail>
+      <div className={isVisible ? "" : "hidden"}>
         <a href="mailto:estanislaovl@gmail.com">estanislaovl@gmail.com</a>
       </div>
-    </div>
+    </StyledRightEmail>
   );
 };
 

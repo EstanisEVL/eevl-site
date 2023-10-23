@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "h1": "Hola, soy",
+    "h2": "Estanislao Elias Varela Lucius.",
+    "h3": "Desarrollador Frontend.",
+    "p": "Soy desarrollador web especializado en diseñar y construir todo tipo de aplicaciones principalmente con React JS. ¡Siempre estoy buscando activamente nuevas oportunidades y experiencias!",
+    "btnText": "Ver currículum"
+  },
+  "about": {
+    "header": "Sobre mi",
+    "firstP": "¡Soy un apasionado por la creación de experiencias web excepcionales! Mi travesía en el desarrollo frontend comenzó en 2015, cuando emprendí el desafío de personalizar un sitio web para el negocio de mis padres. Este proceso de exploración y adaptación me impulsó a adentrarme en el vasto mundo del desarrollo web. Desde entonces, me he dedicado a la construcción de aplicaciones web innovadoras, combinando una base sólida en tecnologías frontend con una visión creativa y atractiva para el usuario. Estoy siempre dispuesto a embarcarme en nuevos retos que me permitan crear aplicaciones con diseños cautivadores que resuelvan problemas de manera eficaz.",
+    "secondP": "Me encuentro inmerso en un emocionante viaje hacia la maestría como Desarrollador Full-stack. Reconozco que este viaje es un constante flujo de crecimiento y aprendizaje, y precisamente eso es lo que lo hace tan atractivo. Hasta el momento, he trabajado con WordPress, HTML, CSS, JavaScript, Bootstrap, Styled-components, Sass, Git/GitHub y React JS. Actualmente, me encuentro estudiando y expandiendo mis proyectos con tecnologías propias del backend como Node.js, Express.js y MongoDB. Además, mi ambición es expandir aún más mi repertorio, incorporando herramientas como TypeScript y MySQL. Mi insaciable curiosidad impulsa mi compromiso por asimilar cualquier habilidad que me permita transformar mis ideas en código.",
+    "ThirdP": "Aquí hay algunas tecnologías con las que he estado trabajando recientemente:"
+  },
+  "projects": {
+    "header": "Mis proyectos"
+  },
+  "otherProjects": {
+    "header": "Más proyectos destacados"
+  },
+  "jobs": {
+    "header": "Experiencia laboral"
+  },
+  "contact": {
+    "header": "¿Querés saber más?",
+    "title": "Contacto",
+    "p": "Si compartís mi pasión por la innovación y el desarrollo, o si tenés un desafío en mente, estaré encantado de saber de vos. Mis canales de comunicación están siempre disponibles para establecer una conexión, colaborar en proyectos ambiciosos o simplemente intercambiar ideas.",
+    "btnText": "Comunicate conmigo"
+  }
+}

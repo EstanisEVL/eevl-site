@@ -1,10 +1,37 @@
-import CV from '../../../assets/cv/CV-Estanislao-Elias-Varela-Lucius-Frontend-Developer-ESP.pdf';
+import CvEs from "../../../assets/cv/CV-Estanislao-Elias-Varela-Lucius-Frontend-Developer-ESP.pdf";
+import CvEn from "../../../assets/cv/Estanislao-Elias-Varela-Lucius-Frontend-Developer-ENG.pdf";
+import useWindowSize from "../../../hooks/useWindowSize";
+import { StyledButton } from "./ButtonStyles";
 
-const CvButton = () => {
-  return(
-    <div className='resume-container'>
-      <a href={ CV } className='cv-btn' target='_blank' rel='noopener noreferrer'>Resume</a>
-    </div>
+const CvButton = ({ isVisible, text, language }) => {
+  const size = useWindowSize();
+  return (
+    <>
+      {size.width < 769 ? (
+        <StyledButton
+          padding={"18px 50px"}
+          fs="13px"
+          as="a"
+          href={language === "en" ? CvEn : CvEs}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {text}
+        </StyledButton>
+      ) : (
+        <StyledButton
+          padding={"12px 16px"}
+          fs="13px"
+          as="a"
+          href={language === "en" ? CvEn : CvEs}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={isVisible || "hidden scroll-in"}
+        >
+          {text}
+        </StyledButton>
+      )}
+    </>
   );
 };
 

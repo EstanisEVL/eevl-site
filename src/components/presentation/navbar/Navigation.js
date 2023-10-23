@@ -1,10 +1,11 @@
-import NavLinks from './NavLinks';
+import NavLinks from "./NavLinks";
+import { StyledDesktopNavigation } from "./NavBarStyles";
 
-const Navigation = () => {
-  return(
-    <div className='categories-desktop'>
-      <NavLinks />
-    </div>
+const Navigation = ({ language }) => {
+  return (
+    <StyledDesktopNavigation>
+      <NavLinks language={language} />
+    </StyledDesktopNavigation>
   );
 };
 

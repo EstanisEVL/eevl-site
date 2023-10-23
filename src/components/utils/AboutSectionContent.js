@@ -1,5 +1,4 @@
 export const AboutSectionContent = {
-  h2: "About Me",
   firstP:
     "Hello! My name is Estanislao and I enjoy building web applications. My interest in web development started back in 2015 when I decided to try building a custom web site for my parent's business — turns out trying to modify different themes and plugins left me with a huge need to learn more about this world!",
   secondP:
@@ -8,7 +7,7 @@ export const AboutSectionContent = {
   skills: [
     { id: 1, title: "HTML & CSS" },
     { id: 2, title: "JavaScript (ES6+)" },
-    { id: 3, title: "React" },
+    { id: 3, title: "React JS" },
     { id: 4, title: "SASS" },
     { id: 5, title: "Bootstrap" },
     { id: 6, title: "WordPress" },

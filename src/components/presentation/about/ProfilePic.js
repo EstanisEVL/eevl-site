@@ -1,23 +1,33 @@
-import profileImg from '../../../assets/img/Estanislao-Elias-Varela-Lucius-Frontend-Developer.jpg';
+import useObserver from "../../../hooks/useObserver";
+import {
+  StyledProfilePicContainer,
+  StyledProfilePicDiv,
+  StyledProfilePicImgContainer,
+} from "./ProfilePicStyles";
 
 const ProfilePic = () => {
-  return(
-    <div className='aboutSection-styledPic'>
-      <div className='styledPic-container'>
-        <div className='img-container'>
+  const { isIntersecting, fromRef } = useObserver({ treshold: 1, rootMargin: "300px 0px 0px 0px" });
+  return (
+    <StyledProfilePicDiv ref={fromRef}>
+      <StyledProfilePicContainer className={isIntersecting ? "" : "hidden scroll-in"} delay={"2s"}>
+        <StyledProfilePicImgContainer>
           <div>
-            <img alt='presentation' aria-hidden='true' src="data:image/svg+xml;charset=utf-8,%3Csvg height='500' width='500' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"/>
+            <img
+              alt="presentation"
+              aria-hidden="true"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg height='500' width='500' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+            />
           </div>
-          <div aria-hidden='true' data-placeholder-image>
-          </div>
+
+          <div aria-hidden="true" data-placeholder-image></div>
+
           <picture>
-            <source type='image/avif' srcSet={ profileImg }></source>
-            <source type='image/webp' srcSet={ profileImg }></source>
-            <img alt='profile pic' src={profileImg} />
+            <source type="image/webp" srcSet="https://i.ibb.co/8bTvqHB/Estanislao-Elias-Varela-Lucius-Frontend-Developer.webp"></source>
+            <img alt="profile pic" src="https://i.ibb.co/8bTvqHB/Estanislao-Elias-Varela-Lucius-Frontend-Developer.webp" />
           </picture>
-        </div>
-      </div>
-    </div>
+        </StyledProfilePicImgContainer>
+      </StyledProfilePicContainer>
+    </StyledProfilePicDiv>
   );
 };
 
