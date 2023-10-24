@@ -149,7 +149,7 @@ export const StyledProjectDescription = styled.div.withConfig({
       color: ${(props) =>
         props.theme.filter === false
           ? props.theme.bg
-          : props.theme.fcSecondary};
+          : props.theme.fc};
     }
     color: ${(props) =>
       props.theme.filter === false
@@ -266,7 +266,6 @@ export const StyledProjectsLinks = styled.div.withConfig({
   }
 `;
 
-// MOVER A OTRO COMPONENTE
 export const StyledProjectImg = styled.div`
   @media (min-width: 769px) {
     grid-column: 1/8;
@@ -318,14 +317,13 @@ export const StyledProjectImg = styled.div`
     &:before {
       width: 100%;
       height: 100%;
-      background-color: ${(props) => props.theme.bg};
+      background-color: "transparent";
       box-sizing: border-box;
       content: "";
       display: block;
       mix-blend-mode: ${(props) =>
         props.theme.bg === "#030C2E" ? "screen" : "difference"};
       position: absolute;
-      /* z-index: 3; */
     }
     div {
       width: auto;

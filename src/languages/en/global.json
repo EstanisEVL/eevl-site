@@ -8,9 +8,9 @@
   },
   "about": {
     "header": "About Me",
-    "firstP": "I am passionate about creating exceptional web experiences! My frontend development journey began in 2015, when I undertook the challenge of customizing a website for my parents' business. This process of exploration and adaptation prompted me to delve into the vast world of web development. Since then, I have dedicated myself to building innovative web applications, combining a solid foundation in front-end technologies with a creative and user-friendly vision. I am always willing to embark on new challenges that allow me to create applications with captivating designs for users who solve problems effectively.",
-    "secondP": "I am on an exciting journey towards becoming proficient as a Full-stack Developer. I recognize that this journey is a constant flow of growth and learning, and that is precisely what makes it so attractive. So far, I've worked with WordPress, HTML, CSS, JavaScript, Bootstrap, Styled-components, Sass, Git/GitHub, and React JS. Currently, I am studying and expanding my projects with backend technologies such as Node.js, Express.js and MongoDB. Also, my ambition is to further expand my repertoire, incorporating tools like TypeScript and MySQL. My insatiable curiosity drives my commitment to learn any skill that allows me to turn my ideas into code.",
-    "ThirdP": "Here are a few technologies I've been working with recently:"
+    "firstP": "I dedicate myself to creating exceptional web experiences. I started frontend development in 2015, undertaking the challenge of creating a custom website for my parent's business. This process of exploration and adaptation prompted me to enter the vast world of web development. Since then, I've been building innovative web applications, combining frontend technologies with a creative and attractive vision for the user.",
+    "secondP": "I am currently training as a Full-stack Developer. I recognize that this journey is a constant flow of growth and learning, and that is precisely what makes it so attractive. So far, I have worked with WordPress, HTML, CSS, JavaScript, Bootstrap, Styled-components, Sass, Git/GitHub, and React JS. I also have experience working with backend technologies such as Node.js, Express.js and MongoDB, and I plan to learn TypeScript, Nest JS and Next.js. My curiosity drives me to assimilate any skill that allows me to transform ideas into code.",
+    "ThirdP": "Technologies I've been working with recently:"
   },
   "projects": {
     "header": "Some Things I’ve Built"
