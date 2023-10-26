@@ -9,7 +9,7 @@
   "about": {
     "header": "About Me",
     "firstP": "I dedicate myself to creating exceptional web experiences. I started frontend development in 2015, undertaking the challenge of creating a custom website for my parent's business. This process of exploration and adaptation prompted me to enter the vast world of web development. Since then, I've been building innovative web applications, combining frontend technologies with a creative and attractive vision for the user.",
-    "secondP": "I am currently training as a Full-stack Developer. I recognize that this journey is a constant flow of growth and learning, and that is precisely what makes it so attractive. So far, I have worked with WordPress, HTML, CSS, JavaScript, Bootstrap, Styled-components, Sass, Git/GitHub, and React JS. I also have experience working with backend technologies such as Node.js, Express.js and MongoDB, and I plan to learn TypeScript, Nest JS and Next.js. My curiosity drives me to assimilate any skill that allows me to transform ideas into code.",
+    "secondP": "I recognize that this web development journey is a constant flow of growth and learning, and that is precisely what makes it so attractive. So far, I have worked with WordPress, HTML, CSS, JavaScript, Bootstrap, Styled-components, Sass, Git/GitHub, and React JS. I also have experience working with backend technologies such as Node.js, Express.js and MongoDB, and I plan to learn TypeScript, Nest JS and Next.js. My curiosity drives me to assimilate any skill that allows me to transform ideas into code.",
     "ThirdP": "Technologies I've been working with recently:"
   },
   "projects": {

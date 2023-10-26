@@ -9,7 +9,7 @@
   "about": {
     "header": "Sobre mi",
     "firstP": "Me dedico a la creación de experiencias web excepcionales. Comencé en el desarrollo frontend en 2015, emprendiendo el desafío de personalizar un sitio web para el negocio de mis padres. Este proceso de exploración y adaptación me impulsó a adentrarme en el vasto mundo del desarrollo web. Desde entonces, he construido aplicaciones web innovadoras, combinando tecnologías frontend con una visión creativa y atractiva para el usuario.",
-    "secondP": "Actualmente me encuentro capacitándome como Desarrollador Full-stack. Reconozco que este viaje es un constante flujo de crecimiento y aprendizaje, y precisamente eso es lo que lo hace tan atractivo. Hasta el momento, he trabajado con WordPress, HTML, CSS, JavaScript, Bootstrap, Styled-components, Sass, Git/GitHub y React JS. También poseo experiencia trabajando con tecnologías propias del backend como Node.js, Express.js y MongoDB, y planeo incorporar TypeScript, Nest Js y Next Js. Mi curiosidad me impulsa a asimilar cualquier habilidad que me permita transformar mis ideas en código.",
+    "secondP": "Reconozco que este viaje por el mundo del desarrollo web implica un constante flujo de crecimiento y aprendizaje, y precisamente eso es lo que me atrae. Hasta el momento, he trabajado con WordPress, HTML, CSS, JavaScript, Bootstrap, Styled-components, Sass, Git/GitHub y React JS. También poseo experiencia trabajando con tecnologías propias del backend como Node.js, Express.js y MongoDB, y planeo incorporar TypeScript, Nest Js y Next Js. Mi curiosidad me impulsa a asimilar cualquier habilidad que me permita transformar ideas en código.",
     "ThirdP": "Tecnologías con las que he estado trabajando recientemente:"
   },
   "projects": {
